@@ -106,7 +106,7 @@ form.addEventListener("submit", async (e) => {
       const body = encodeURIComponent(
         `New Cyahh Scales lead:\n\nName: ${data.fullname}\nBrand: ${data.brand}\nEmail: ${data.email}\nPhone: ${data.phone}\nMonthly revenue: ${data.monthly}\nDaily budget: ${data.budget}\nNotes: ${data.notes}\nTime: ${data.timestamp}`
       );
-      const mailto = `mailto:youremail@example.com?subject=${encodeURIComponent("New Cyahh Scales Lead")}&body=${body}`;
+      const mailto = `mailto:cyahhscales@gmail.com?subject=${encodeURIComponent("New Cyahh Scales Lead")}&body=${body}`;
       showStatus("No form endpoint set. Opening your email client...", true);
       setTimeout(()=>{ location.href = mailto; submitBtn.disabled=false; submitBtn.textContent="Submit Application"; }, 800);
       return;
