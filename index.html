@@ -1,86 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyahh Scales</title>
-  <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      margin: 0;
-    }
-
-    img {
-      width: 150px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      max-width: 400px;
-      font-size: 1rem;
-      margin-bottom: 20px;
-      color: #ccc;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      width: 300px;
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    input, textarea {
-      margin-bottom: 10px;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    button {
-      background: red;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: darkred;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cyahh Scales — Let Me Scale Your Brand</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <img src="cyahhscales.png" alt="Cyahh Scales Logo">
-  <h1>Let Me Scale Your Brand!</h1>
-  <p>Fill out this quick form so we can help you scale your clothing brand with paid ads.</p>
+  <canvas id="stars"></canvas>
 
-  <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-    <input type="text" name="Full Name" placeholder="Full Name" required>
-    <input type="email" name="Email" placeholder="Email" required>
-    <input type="tel" name="Phone" placeholder="Phone Number" required>
-    <input type="text" name="Brand" placeholder="Brand Name" required>
-    <input type="text" name="Monthly Income" placeholder="How much you make per month?" required>
-    <input type="text" name="Ad Budget" placeholder="Daily ad budget ($)" required>
-    <textarea name="Notes" placeholder="Anything else we should know?" rows="4"></textarea>
-    <button type="submit">Submit</button>
-  </form>
+  <main class="wrap">
+    <header class="top">
+      <img src="cyahhscales.png" alt="Cyahh Scales logo" class="logo" />
+      <h1>Let Me Scale Your Brand<span class="rocket">🚀</span></h1>
+      <p class="sub">Enter your brand details below — I’ll review and contact you with a plan.</p>
+    </header>
+
+    <section class="card">
+      <form id="applyForm" autocomplete="on" novalidate>
+        <div class="row">
+          <input type="text" name="fullname" id="fullname" placeholder="Full name" required />
+          <input type="text" name="brand" id="brand" placeholder="Brand name" required />
+        </div>
+
+        <div class="row">
+          <input type="email" name="email" id="email" placeholder="Email address" required />
+          <input type="tel" name="phone" id="phone" placeholder="Phone number" required />
+        </div>
+
+        <div class="row">
+          <input type="number" name="monthly" id="monthly" placeholder="Monthly revenue ($)" min="0" required />
+          <input type="number" name="budget" id="budget" placeholder="Daily ad budget ($)" min="1" required />
+        </div>
+
+        <textarea name="notes" id="notes" rows="3" placeholder="Short note or goals (optional)"></textarea>
+
+        <p class="hint">Recommended: <strong>$50/day+</strong> for best scaling results.</p>
+
+        <div class="actions">
+          <button type="submit" id="submitBtn">Submit Application</button>
+        </div>
+
+        <p id="status" class="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <small>© Cyahh Scales — professional clothing brand scaling</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
