@@ -1,48 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cyahh Scales | Let Me Scale Your Brand</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyahh Scales</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
 
-  <body>
-    <div class="container">
-      <img src="cyahhscales.png" alt="Cyahh Scales Logo" class="logo" />
-      <h1>Let Me Scale Your Brand!</h1>
-      <p class="subtitle">
-        Fill out your brand info below — I’ll review and get back to you shortly.
-      </p>
+    img {
+      width: 150px;
+      margin-bottom: 20px;
+    }
 
-      <form id="brandForm">
-        <input type="text" name="fullname" placeholder="Full Name" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <input type="text" name="brand" placeholder="Brand Name" required />
-        <input
-          type="number"
-          name="monthly"
-          placeholder="Monthly Revenue ($)"
-          required
-        />
-        <input
-          type="number"
-          name="budget"
-          placeholder="Daily Ad Budget ($)"
-          required
-        />
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
 
-        <p class="note">💡 Recommended: at least $50/day for strong results</p>
+    p {
+      max-width: 400px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
 
-        <button type="submit">Submit</button>
-      </form>
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-      <p id="thankYou" class="hidden">
-        ✅ Thank you! We’ll contact you soon to start scaling your brand.
-      </p>
-    </div>
+    input, textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
 
-    <script src="script.js"></script>
-  </body>
+    button {
+      background: red;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+  <img src="cyahhscales.png" alt="Cyahh Scales Logo">
+  <h1>Let Me Scale Your Brand!</h1>
+  <p>Fill out this quick form so we can help you scale your clothing brand with paid ads.</p>
+
+  <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+    <input type="text" name="Full Name" placeholder="Full Name" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <input type="tel" name="Phone" placeholder="Phone Number" required>
+    <input type="text" name="Brand" placeholder="Brand Name" required>
+    <input type="text" name="Monthly Income" placeholder="How much you make per month?" required>
+    <input type="text" name="Ad Budget" placeholder="Daily ad budget ($)" required>
+    <textarea name="Notes" placeholder="Anything else we should know?" rows="4"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</body>
 </html>
