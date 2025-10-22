@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyahh Scales | Let Me Scale Your Brand</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="cyahhscales.png" alt="Cyahh Scales Logo" class="logo" />
+      <h1>Let Me Scale Your Brand!</h1>
+      <p class="subtitle">
+        Fill out your brand info below — I’ll review and get back to you shortly.
+      </p>
+
+      <form id="brandForm">
+        <input type="text" name="fullname" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="brand" placeholder="Brand Name" required />
+        <input
+          type="number"
+          name="monthly"
+          placeholder="Monthly Revenue ($)"
+          required
+        />
+        <input
+          type="number"
+          name="budget"
+          placeholder="Daily Ad Budget ($)"
+          required
+        />
+
+        <p class="note">💡 Recommended: at least $50/day for strong results</p>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="thankYou" class="hidden">
+        ✅ Thank you! We’ll contact you soon to start scaling your brand.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
